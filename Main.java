@@ -36,7 +36,16 @@ public class Main {
                     case 1:
                         System.out.println("\n=== Tambah Data Guru ===");
                         while (true) {
-                            Teacher teacher = new Teacher(); 
+                            System.out.println('Masukkan nama guru: ');
+                            String name = scanner.nextLine();
+                            
+                            System.out.println('Masukkan umur guru: ');
+                            Int age = scanner.nextLine();
+                            
+                            System.out.println('Masukkan mapel guru: ');
+                            String subject = scanner.nextLine();
+                            
+                            Teacher teacher = new Teacher(name, age, subject); 
                             teachers.add(teacher);
 
                             System.out.print("Tambah guru lagi? (y/n): ");
@@ -49,7 +58,16 @@ public class Main {
                     case 2:
                         System.out.println("\n=== Tambah Data Siswa ===");
                         while (true) {
-                            Student student = new Student();
+                            System.out.println('Masukkan nama siswa: ');
+                            String name = scanner.nextLine();
+                            
+                            System.out.println('Masukkan umur siswa: ');
+                            String age = scanner.nextLine();
+                            
+                            System.out.println('Masukkan jurusan siswa: ');
+                            String major = scanner.nextLine();
+                            
+                            Student student = new Student(name, age, major);
                             students.add(student);
 
                             System.out.print("Tambah siswa lagi? (y/n): ");
