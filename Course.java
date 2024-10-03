@@ -18,6 +18,17 @@ class Course {
     }
 
     public void displayCourseInfo() {
+        /*
+            - DRY -
+            System.out.println bisa dibuat satu baris saja.
+            contoh:
+            System.out.println('
+                Course: "+ courseName +"\n
+                Taught by: "+ teacher.name +"\n ...
+            ');
+
+            pemanggilan fungsi hanya sekali saja sehingga kode lebih efisien dan mudah dibaca.
+        */
         System.out.println("Course: " + courseName);
         System.out.println("Taught by: " + teacher.name);
         System.out.println("Lab Course: " + (isLabCourse ? "Yes" : "No"));

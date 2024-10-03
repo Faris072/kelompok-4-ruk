@@ -11,6 +11,16 @@ public class Main {
 
         while (true) {
             try {
+                /*
+                    - DRY -
+                    harusnya hanya 1 System.out.println saja. contoh:
+                    System.out.println('
+                        1. Tambah Data Guru \n
+                        2. Tambah Data siswa \n -- dan seterusnya
+                    ')
+
+                    Sehingga kode lebih efisien karena tidak memanggil fungsi berulangkali.
+                */
                 System.out.println("\n=== MENU ===");
                 System.out.println("1. Tambah Data Guru");
                 System.out.println("2. Tambah Data Siswa");
@@ -108,7 +118,7 @@ public class Main {
                 }
             } catch (InputMismatchException e) {
                 System.out.println("Input tidak valid. Masukkan angka untuk pilihan menu.");
-                scanner.nextLine(); 
+                scanner.nextLine(); // bisa langsung di kasih \n pada baris atasnya. -> kiss
             }
         }
     }
@@ -125,7 +135,7 @@ public class Main {
                 }
             } catch (InputMismatchException e) {
                 System.out.println("Input tidak valid. Masukkan angka.");
-                scanner.nextLine();
+                scanner.nextLine(); // bisa langsung di kasih \n pada baris atasnya. -> kiss
             }
         }
         return index;
